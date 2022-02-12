@@ -4,12 +4,17 @@ import (
 	"log"
 	"os"
 
+	"github.com/joho/godotenv"
 	"github.com/tarathep/tutorial-backend/apis"
 	"github.com/tarathep/tutorial-backend/db"
 	"github.com/tarathep/tutorial-backend/router"
 )
 
 func main() {
+	err := godotenv.Load()
+	// if err != nil {
+	// 	log.Fatal("Error loading .env file")
+	// }
 
 	// Env Config
 	dbconn := os.Getenv("MONGODB_CONNECTION_STRING") // mongodb://root:password@192.168.1.102:27017
