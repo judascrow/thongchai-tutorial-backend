@@ -28,7 +28,8 @@ jobs:
         uses: actions/setup-go@v2
         with:
           go-version: "^1.17.6" # The Go version to download (if necessary) and use
-        run: |
+
+      - run: |
           go version
 
       - name: Install dependencies
